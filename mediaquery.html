@@ -4,10 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MediaQuery</title>
+    <style>
+        /* desktop screen */
+        h1 {
+            color: red;
+        }
+
+        main {
+            display: flex;
+            height: 100vh;
+            width: 100%;
+        }
+        main aside {
+            width: 20%;
+            height: 100vh;
+            background-color: brown;
+        }
+               main article {
+            width: 70%;
+            height: 100vh;
+            background-color: rgb(255, 161, 161);
+        }
+
+        nav {
+            width: 100%;
+            height: 40px;
+            background-color: lightblue;
+        }
+        nav ul {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            min-height: 40px;
+        }
+
+        /* tab screen */
+         @media (max-width:780px) {
+            h1 {
+                color: green;
+                text-align: center;
+            }
+         
+            main aside {
+                width: 50%;
+            }
+            main article {
+                width: 50%;
+            }
+        }
+
+        /* mobile screen */
+        @media (max-width:380px){
+            h1 {
+                color: blue;
+                text-align: center;
+            }
+            main {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+            main aside {
+                width: 100%;
+            }
+            main article {
+                width: 100%;
+            }
+
+            nav  {
+height: 250px;
+
+            }
+            nav ul {
+                flex-direction: column;
+                
+                
+            }
+            nav ul li {
+                width: 100%;
+                max-height: 240px;
+                
+            }
+        }
+   
+ 
+    </style>
 </head>
 <body>
+    <header>
     <h1>
         Welcome to Media MediaQuery
     </h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Service</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <main>
+        <aside></aside>
+        <article></article>
+    </main>
 </body>
 </html>
