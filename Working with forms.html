@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with Forms</title>
+    <style>
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 20px auto;
+            width: 60%;
+            max-width: 600px;
+            padding: 40px;
+        }
+        legend {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Working with Forms</h1>
+    <!-- 
+    forms: are used to collect user input. They can include text fields, checkboxes, radio buttons, and more.
+   from attributes:
+    - action: specifies where to send the form data when submitted.
+    - method: specifies the HTTP method to use when sending form data (GET or POST).
+    - enctype: specifies how the form data should be encoded when submitted (e.g., application/x-www-form-urlencoded, multipart/form-data).
+    - name: assigns a name to the form, which can be used to reference it in scripts or styles.
+    - target: specifies where to display the response after submitting the form (e.g., _
+    -id: assigns a unique identifier to the form, which can be used for styling or scripting.
+    Input elements:
+    - text: a single-line text input field.
+    - password: a single-line text input field that hides the entered characters.
+    - checkbox: a checkbox that can be checked or unchecked.
+    - radio: a radio button that allows the user to select one option from a group.
+    - submit: a button that submits the form.
+    - reset: a button that resets the form fields to their default values.
+    - file: an input field that allows the user to select a file to upload.
+    - hidden: a field that is not visible to the user but can store data to be submitted with the form.
+    - textarea: a multi-line text input field for larger amounts of text.
+    - select: a dropdown list that allows the user to select one or more options.
+    - option: defines an option in a dropdown list.
+    - label: associates a label with a form control, improving accessibility.
+    - fieldset: groups related form controls and labels, often used for better organization.
+    - legend: provides a caption for a fieldset, describing its purpose.
+    - datalist: provides a list of predefined options for an input field, allowing users to 
+select from a list or enter their own value.
+    -email: a single-line text input field specifically for email addresses, with built-in validation.
+    - number: a single-line text input field for numeric values, with built-in validation.
+    - date: a single-line text input field for selecting dates, with a date picker interface.
+    - time: a single-line text input field for selecting times, with a time picker interface.
+    - url: a single-line text input field specifically for URLs, with built-in validation.
+    - color: a single-line text input field for selecting colors, with a color picker interface.
+    - search: a single-line text input field optimized for search queries, often with a search icon.
+    - tel: a single-line text input field specifically for telephone numbers, with built-in validation.
+    - range: a slider input for selecting a value within a specified range, often with a visual representation.
+    - month: a single-line text input field for selecting months, with a month picker interface.
+    - week: a single-line text input field for selecting weeks, with a week picker interface.
+    - datetime-local: a single-line text input field for selecting both date and time, with a combined picker interface.
+
+    input attributes:
+    - value: specifies the initial value of the input field.
+    - placeholder: provides a hint to the user about what to enter in the input field.
+    - required: indicates that the input field must be filled out before submitting the form.
+    - disabled: makes the input field uneditable and prevents it from being submitted.
+    - readonly: makes the input field uneditable but allows it to be submitted.
+    - maxlength: specifies the maximum number of characters allowed in the input field. 
+    - minlength: specifies the minimum number of characters required in the input field.
+    - pattern: defines a regular expression that the input value must match.
+    -autofocus: automatically focuses the input field when the page loads.
+
+    -->
+    <form>
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="name">*Name:</label>
+            <input type="text" id="name" name="name" placeholder="Jabc@876" required pattern="[A-Z]{1}[a-z]{3,6}[@$&]{1}[0-9]{3}"><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required><br><br>
+
+            <label for="datate">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required><br><br>
+
+            <label>Gender</label>
+            <input type="radio" id="male" name="radio1">Male
+            <input type="radio" id="female" name="radio1">Female
+            <input type="radio" id="other" name="radio1">Other<br><br
+
+            <label for="country">Qualification</label>
+            <input type="checkbox" id="bachelor" name="qualification" value="bachelor">Bachelor
+            <input type="checkbox" id="master" name="qualification" value="master">Master
+            <input type="checkbox" id="phd" name="qualification" value="phd">PhD<br><br>
+
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+                <option value="usa">USA</option>
+                <option value="canada">Canada</option>
+                <option value="uk">UK</option>
+                <option value="australia">Australia</option>
+                <option value="india">India</option>
+                <option value="other">Other</option>
+            </select><br><br>
+
+            <label for="comments">Comments:</label><br>
+            <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter your comments here..."></textarea><br><br>    
+            <label for="file">Upload File:</label>
+            <input type="file" id="file" name="file"><br><br>
+            
+            <label for="color">Favorite Color:</label>
+            <input type="color" id="color" name="color"><br><br>    
+
+            <label for="range">Select a Range:</label>
+            <input type="range" id="range" name="range" min="1" max="100" value="50"><br><br>
+            <label for="search">Search:</label>
+            <input type="search" id="search" name="search" placeholder="Search..."><br><br>
+
+            <lable for="number">Enter a Number:</lable>
+            <input type="number" id="number" name="number" min="1" max="100" step="1" placeholder="Enter a number"><br><br>
+
+           <button type="submit">Submit</button>
+           <button type="reset">Reset</button>
+        </fieldset>
+    </form>
+
+    <h2>Form in Table</h2>
+    <table align="center" border="1" width="50%">
+        <tr>
+            <td width="30%">User Name</td>
+            <td>
+                <input type="text" placeholder="User Name">
+            </td>
+        </tr>
+
+        <tr>
+            <td>Email</td>
+            <td>
+                <input type="email" placeholder="Email">
+                
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

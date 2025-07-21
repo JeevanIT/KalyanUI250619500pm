@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 50px;
+    border: solid 8px #cccccc;
+}
+.box:hover {
+   /*  transform:translateX(50px) rotate(45deg) scale(1.2); */
+   transform: scale(1.2);
+
+
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+}
+nav ul li {
+    list-style: none;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    background-color: aquamarine;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+nav ul li:hover {
+    color: #ff6347;
+    transform: scale(1.2) translateY(-5px);
+    border-bottom: 5px solid #ff6347;
+}
+nav ul li:hover h3{
+    transform: scale(0.5);
+
+}
+nav ul li:hover p{
+    transform: scale(1.2);
+    
+}
+
+
+/* ul {
+    list-style-type: none;
+    padding: 0;
+}
+ul li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease-in-out;
+    transition: padding-left 0.3s ease-in-out;
+}
+ul li:hover {
+    background-color: #e0e0e0;
+    transform: translateX(10px);
+    padding-left: 50px;
+} */
+
+/* 
+transform and transition example
+This CSS file demonstrates the use of transform and transition properties in CSS.
+transform allows you to rotate, scale, skew, or translate an element.
+transition allows you to change property values smoothly over a given duration.
+*/

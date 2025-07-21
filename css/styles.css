@@ -1,0 +1,17 @@
+body {
+    background-color: lightgoldenrodyellow;
+    display: flex;
+    flex-direction: column;
+}
+p{
+    color: blue;
+    padding: 50px;
+    background-color: lightgray;
+    font-family: 'Times New Roman', Times, serif;
+}
+main {
+    width: 50%;
+    margin: 50px auto;
+    padding: 60px;
+    background-color: blueviolet;
+}
